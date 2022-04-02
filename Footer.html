@@ -1,0 +1,7 @@
+<!--This is the code for the footer. It contains the link to the inventory. 
+The hr element helps to seperate it from the main passage-->
+{(if: (passage:)'s tags contains 'donotshowhr')[<!--Do nothing-->]
+(else:)[<hr>]}
+{(if: (passage:)'s name is "inventory")[<!--Do nothing-->]
+(else-if: (passage:)'s tags contains "donotshowinventory")[<!--Do nothing-->]
+ (else:)[''Check [[inventory]].'']}

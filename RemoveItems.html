@@ -1,0 +1,6 @@
+<!--Removing items is a little easier than adding them.-->
+<h1>Dropped it</h1>
+(if: $inv contains "sword")[
+(set: $inv to $inv - (a: "sword")) 
+Oh no you dropped your sword!]
+(else:)[You stumble but don't loose anything.]

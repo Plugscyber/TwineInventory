@@ -1,0 +1,5 @@
+/*this is very basic but makes sure the hr stands out and has some padding between it and the main passage.*/
+hr{
+border: 3px solid white;
+  margin-top:5px;
+}

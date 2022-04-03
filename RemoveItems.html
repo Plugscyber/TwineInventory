@@ -5,7 +5,19 @@
 (set: $inv to $inv - (a: "Sword")) 
 If you have a sword you just dropped it!
 
-<!--Example 1:Removing two items-->
+<!--Example 2:Removing two items-->
 <h1>Dropped it</h1>
 (set: $inv to $inv - (a: "Sword", "Spellbook")) 
 If you have a sword or spellbook you just dropped it!
+
+<--Example 3: Removing an item depending on if the player has it in their inventory.
+I find this better than the above as you don't have redudant information about dropping an item you don't have.-->
+
+<h1>Dropped it</h1>
+(if: $inv contains "Sword")[(goto:"dropped sword")]
+(Else:)[You stumble but don't loose anything!]
+  
+<!--name this passage 'dropped sword"-->
+  <h1>Oh no!</h1>
+ (set: $inv to $inv - "Sword")
+  You dropped your sword!

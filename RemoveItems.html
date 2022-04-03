@@ -1,6 +1,11 @@
 <!--Removing items is a little easier than adding them.-->
+
+<!--Example 1:Removing a single item-->
 <h1>Dropped it</h1>
-(if: $inv contains "sword")[
-(set: $inv to $inv - (a: "sword")) 
-Oh no you dropped your sword!]
-(else:)[You stumble but don't loose anything.]
+(set: $inv to $inv - (a: "Sword")) 
+If you have a sword you just dropped it!
+
+<!--Example 1:Removing two items-->
+<h1>Dropped it</h1>
+(set: $inv to $inv - (a: "Sword", "Spellbook")) 
+If you have a sword or spellbook you just dropped it!

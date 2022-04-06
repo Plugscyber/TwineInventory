@@ -8,5 +8,6 @@
 you must make a passage with the same name to pull the text from. -->
 {(click: "item1")[(display: "item1")]}
 
-<!--this means you don't have to worry about your player being caught looping back to the inventory page if you forget to add the donotshowinventory tag-->
+<!--this code allows for some more complex tricks with inventory and equipped items without risking inventory loops.
+beyond the scope of this project but worth using.-->
 (link: "Return")[(goto: (history: where not ("inventory" is in its name))'s last)]

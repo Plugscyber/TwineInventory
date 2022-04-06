@@ -8,6 +8,6 @@
 you must make a passage with the same name to pull the text from. -->
 {(click: "item1")[(display: "item1")]}
 
-<!--this code allows for some more complex tricks with inventory and equipped items without risking inventory loops.
+<!--this code allows for some more complex tricks with inventory use items in inventory without risking inventory loops.
 beyond the scope of this project but worth using.-->
 (link: "Return")[(goto: (history: where not ("inventory" is in its name))'s last)]

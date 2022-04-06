@@ -1,7 +1,4 @@
-<!--make sure to add this tag to the passage. Your player will get stuck in a loop being on the inventory page potentally otherwise.
-#donotshowinventory
--->
-
+ <!--add donotshowinventory to the passage tags so the player doesn't have a link to their inventory while on the inventory page.-->
 <h1>Inventory</h1>
 <h2>Items</h2>
 {(if: $inv's length > 0)[Your inventory contains (joined:", ",...$inv).]
@@ -11,4 +8,5 @@
 you must make a passage with the same name to pull the text from. -->
 {(click: "item1")[(display: "item1")]}
 
-[(link-goto: "Return", (history:)'s last)]
+<!--this means you don't have to worry about your player being caught looping back to the inventory page if you forget to add the donotshowinventory tag-->
+(link: "Return")[(goto: (history: where not ("inventory" is in its name))'s last)]

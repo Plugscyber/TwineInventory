@@ -1,13 +1,15 @@
- <!--add donotshowinventory to the passage tags so the player doesn't have a link to their inventory while on the inventory page.-->
+<!--make sure to add this tag to the passage. Your player will get stuck in a loop being on the inventory page potentally otherwise.
+'do not show footer'
+-->
+
 <h1>Inventory</h1>
-<h2>Items</h2>
 {(if: $inv's length > 0)[Your inventory contains (joined:", ",...$inv).]
 (else:)[Your inventory is empty.]}
+
+(for: each _item, ...$inv)[(unless: $inv's last is _item)[, ]]
 
 <!--use this to display text on click about an item. Where it says display, 
 you must make a passage with the same name to pull the text from. -->
 {(click: "item1")[(display: "item1")]}
 
-<!--this code allows for some more complex tricks with inventory use items in inventory without risking inventory loops.
-beyond the scope of this project but worth using.-->
 (link: "Return")[(goto: (history: where not ("inventory" is in its name))'s last)]

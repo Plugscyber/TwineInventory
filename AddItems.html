@@ -1,6 +1,9 @@
-<!--with the inventory system, you must be careful of adding items more than once if you don't want to. This is due to the inventory passage being a new passage therefore 'resetting' passages when you return to them. These examples show ways to add items avoding that.-->
+<!--with the inventory system, you must be careful of adding items more than once if you don't want to. 
+This is due to the inventory passage being a new passage therefore 'resetting' passages when you return to them. 
+These examples show ways to add items avoding that.-->
 
-<!--Example 1: simple way to add items to avoid duplication. You can change the passage text or leave it the same depending on what works best for your story.-->
+<!--Example 1: simple way to add items to avoid duplication. 
+You can change the passage text or leave it the same depending on what works best for your story.-->
 
 <h1>Ruby</h1>
 (if: $inv contains "Ruby")[You are in a dark room lit with torches. The chest you opened is empty.]
@@ -10,7 +13,7 @@ You are in a dark room lit with torches. Inside a chest you find a ruby!]
   
 
 <!--Example 2: searching a room by clicking named hooks.-->
-  <!--Make sure either that these are items you won't find multiple times on your adventure,
+ <!--Make sure either that these are items you won't find multiple times on your adventure,
 or your player will be told they've searched somewhere they haven't looked.
 Alternatively, reword this passage to say for example 'you see a sword and sheild on a wepons rack but you have these items already' for the else marco. 
 That way things make sense if the player had these items before this passage or picked them up from this passage and checked their inventry.-->

@@ -6,8 +6,6 @@
 {(if: $inv's length > 0)[Your inventory contains (joined:", ",...$inv).]
 (else:)[Your inventory is empty.]}
 
-(for: each _item, ...$inv)[(unless: $inv's last is _item)[, ]]
-
 <!--use this to display text on click about an item. Where it says display, 
 you must make a passage with the same name to pull the text from. -->
 {(click: "item1")[(display: "item1")]}
